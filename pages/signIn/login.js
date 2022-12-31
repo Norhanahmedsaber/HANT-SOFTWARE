@@ -1,11 +1,10 @@
 let users = [];
 
-let login = function (email, password) {
-  return true;
-};
 
 document.querySelector("#signin").addEventListener("click", function (e) {
-  console.log(signin());
+ if(signin()){
+    window.location.href = "/pages/profile"
+ }
 });
 function signin() {
   const emailEl = document.querySelector("#email-text").value;
@@ -17,9 +16,11 @@ function signin() {
   let exist = false;
   users.forEach((user) => {
     if (emailEl === user.email && passwordEl === user.password) {
+        localStorage.setItem("loggedInUser", JSON.stringify(user))
       exist = true;
       return;
     }
   });
-  return exist;
+ return exist;
+  
 }
