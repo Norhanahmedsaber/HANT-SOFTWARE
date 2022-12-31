@@ -1,42 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/sidebar/styles.css" rel="stylesheet"></link>
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/sidebar/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/pages/profile/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Sidebar</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="side-nav">
-            <ul class="nav-list">
-                <li><a href="/pages/home/index.html"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
-                <li><a href="/pages/profile/index.html"><i class="fa-solid fa-user"></i><p>Profile</p></a></li>
-                <li><a href="/pages/friends/index.html"><i class="fa-solid fa-user-group"></i><p>Friends</p></a></li>
-                <li><a href="/pages/groups/index.html"><i class="fa-solid fa-people-group"></i><p>Groups</p></a></li>
-                <li><a href="/pages/signIn/index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a></li>
-                <div class="active"></div>
-            </ul>
+      <div class="side-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="/pages/home/index.html"
+              ><i class="fa-solid fa-house"></i>
+              <p>Home</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/profile/index.html"
+              ><i class="fa-solid fa-user"></i>
+              <p>Profile</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/friends/index.html"
+              ><i class="fa-solid fa-user-group"></i>
+              <p>Friends</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/groups/index.html"
+              ><i class="fa-solid fa-people-group"></i>
+              <p>Groups</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/signIn/index.html"
+              ><i class="fa-solid fa-right-from-bracket"></i>
+              <p>Logout</p></a
+            >
+          </li>
+          <div class="active"></div>
+        </ul>
+      </div>
+      <div class="page">
+        <div class="search-bar">
+          <a href="#" class="logo">
+            <img src="/sidebar/logo.png" class="logo-img" />
+          </a>
+          <div class="box">
+            <form name="search">
+              <input
+                type="text"
+                class="input"
+                name="txt"
+                onmouseout="this.value = ''; this.blur();"
+              />
+            </form>
+            <i class="fas fa-search"></i>
+          </div>
         </div>
-        <div class="page">
-            <div class="search-bar">
-                <a href="#" class="logo">
-                    <img src="/sidebar/logo.png" class="logo-img">
-                </a>
-                <div class="box">
-                    <form name="search">
-                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                    </form>
-                    <i class="fas fa-search"></i>
-                
-                </div>
+        <div class="wrapper">
+          <div class="profile">
+            <div class="info">
+              <div class="profile-picture"></div>
+              <div class="bio"></div>
+              <button id="edit-btn">
+                <img src="/pages/profile/Images/pencil.png" alt="" />
+              </button>
             </div>
-            <div class="wrapper">
-                <p>Profile Page Works!</p>
+            <div class="posts">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              veritatis maxime obcaecati cumque exercitationem quidem,
+              asperiores vero earum eligendi perferendis possimus quis facere
+              assumenda dolor doloribus reprehenderit placeat, fugiat
+              consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Consectetur alias voluptate aut. Rem quam recusandae sint
+              dolore iste, illum quo quasi, cum cumque consequuntur aut mollitia
+              maxime aliquid asperiores iure! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Neque voluptas delectus blanditiis
+              deserunt aperiam recusandae aliquam sunt magni? Et porro vero
+              aliquam dolore nostrum nemo iusto tempore illo autem delectus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati repellendus exercitationem, non error soluta, hic
+              voluptatum suscipit ut quibusdam architecto dignissimos quam
+              temporibus quo, odio praesentium aperiam minima minus sint! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Aut non
+              delectus eum, facilis id sed culpa doloremque iste, suscipit
+              mollitia sequi asperiores recusandae cupiditate quasi eius
+              provident similique nostrum alias! Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Molestiae officiis voluptate ex
+              ducimus illum iste necessitatibus? Et ipsa alias harum, voluptatum
+              vel totam error. Pariatur sint assumenda sed architecto
+              asperiores. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Omnis veritatis maxime obcaecati cumque exercitationem
+              quidem, asperiores vero earum eligendi perferendis possimus quis
+              facere assumenda dolor doloribus reprehenderit placeat, fugiat
+              consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Consectetur alias voluptate aut. Rem quam recusandae sint
+              dolore iste, illum quo quasi, cum cumque consequuntur aut mollitia
+              maxime aliquid asperiores iure! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Neque voluptas delectus blanditiis
+              deserunt aperiam recusandae aliquam sunt magni? Et porro vero
+              aliquam dolore nostrum nemo iusto tempore illo autem delectus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati repellendus exercitationem, non error soluta, hic
+              voluptatum suscipit ut quibusdam architecto dignissimos quam
+              temporibus quo, odio praesentium aperiam minima minus sint! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Aut non
+              delectus eum, facilis id sed culpa doloremque iste, suscipit
+              mollitia sequi asperiores recusandae cupiditate quasi eius
+              provident similique nostrum alias! Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Molestiae officiis voluptate ex
+              ducimus illum iste necessitatibus? Et ipsa alias harum, voluptatum
+              vel totam error. Pariatur sint assumenda sed architecto
+              asperiores. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Omnis veritatis maxime obcaecati cumque exercitationem
+              quidem, asperiores vero earum eligendi perferendis possimus quis
+              facere assumenda dolor doloribus reprehenderit placeat, fugiat
+              consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Consectetur alias voluptate aut. Rem quam recusandae sint
+              dolore iste, illum quo quasi, cum cumque consequuntur aut mollitia
+              maxime aliquid asperiores iure! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Neque voluptas delectus blanditiis
+              deserunt aperiam recusandae aliquam sunt magni? Et porro vero
+              aliquam dolore nostrum nemo iusto tempore illo autem delectus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati repellendus exercitationem, non error soluta, hic
+              voluptatum suscipit ut quibusdam architecto dignissimos quam
+              temporibus quo, odio praesentium aperiam minima minus sint! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Aut non
+              delectus eum, facilis id sed culpa doloremque iste, suscipit
+              mollitia sequi asperiores recusandae cupiditate quasi eius
+              provident similique nostrum alias! Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Molestiae officiis voluptate ex
+              ducimus illum iste necessitatibus? Et ipsa alias harum, voluptatum
+              vel totam error. Pariatur sint assumenda sed architecto
+              asperiores. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Omnis veritatis maxime obcaecati cumque exercitationem
+              quidem, asperiores vero earum eligendi perferendis possimus quis
+              facere assumenda dolor doloribus reprehenderit placeat, fugiat
+              consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Consectetur alias voluptate aut. Rem quam recusandae sint
+              dolore iste, illum quo quasi, cum cumque consequuntur aut mollitia
+              maxime aliquid asperiores iure! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Neque voluptas delectus blanditiis
+              deserunt aperiam recusandae aliquam sunt magni? Et porro vero
+              aliquam dolore nostrum nemo iusto tempore illo autem delectus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati repellendus exercitationem, non error soluta, hic
+              voluptatum suscipit ut quibusdam architecto dignissimos quam
+              temporibus quo, odio praesentium aperiam minima minus sint! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Aut non
+              delectus eum, facilis id sed culpa doloremque iste, suscipit
+              mollitia sequi asperiores recusandae cupiditate quasi eius
+              provident similique nostrum alias! Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Molestiae officiis voluptate ex
+              ducimus illum iste necessitatibus? Et ipsa alias harum, voluptatum
+              vel totam error. Pariatur sint assumenda sed architecto
+              asperiores.
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <script src="/pages/profile/script.js"></script>
+  </body>
 </html>
