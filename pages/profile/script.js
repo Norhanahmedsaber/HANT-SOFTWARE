@@ -20,3 +20,6 @@ function render() {
   infoEl.appendChild(bioEl);
 }
 render();
+document.getElementById("edit-btn").addEventListener("click", ()=> {
+  window.location.href = "/pages/profile/edit.html"
+})
