@@ -18,10 +18,11 @@ function signup()
         email,
         password,
         firstName,
-        lastName
+        lastName,
+        name: firstName + " " + lastName
     }
     users.push(user)
     const userstr = JSON.stringify(users);
-    localStorage.setItem("users" , userstr)
+    localStorage.setItem("users" , userstr);
 
 }
