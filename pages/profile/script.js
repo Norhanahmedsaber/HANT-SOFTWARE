@@ -1,7 +1,8 @@
-const info = {
-  name: "Anas Hesham",
-  bio: "Hussien Mostafa Mahmoud",
-  imgURL: "/pages/profile/Images/WIN_20221231_11_48_28_Pro.jpg",
+const user = JSON.parse(localStorage.getItem("loggedInUser"));
+let info = {
+  name: user.name,
+  bio: user.bio,
+  imgURL: user.img,
 };
 function render() {
   const ppEl = document.querySelector(".profile-picture");
