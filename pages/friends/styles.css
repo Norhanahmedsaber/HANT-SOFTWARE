@@ -1,0 +1,97 @@
+.image-1 {
+  width: 90px;
+  height: 90px;
+  display: inline-flex;
+  margin-left: 30px;
+  position: relative;
+  top: 10px;
+  padding-top: 10px;
+}
+
+.name {
+  margin-left: 10px;
+  margin-right: 80px;
+  display: inline-flex;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 15px;
+}
+
+.div-table {
+  display: flexbox;
+  flex-direction: row;
+  width: 80%;
+  margin-top: 60px;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.edit-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: #b8c3d1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  top: 45px;
+  float: right;
+  margin-left: 30px;
+}
+.edit-btn:hover {
+  cursor: pointer;
+  background-color: #8b98a9;
+  scale: (1.01);
+}
+img {
+  width: 100%;
+}
+.edit:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px black;
+}
+/* .button {
+        background-color: rgb(78, 180, 203);
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        display: inline-flex;
+        align-items: center;
+        transition: .3s;
+        overflow: hidden;
+        cursor: pointer;
+        color: #fff;
+        position: relative;
+        float: right;
+        top: 35px;
+        margin-left: 30px;
+
+    }
+    .plus,.show, .text {
+        transition: .3s;
+        font-size: small;
+        display: inline-block;
+        text-align: center;
+    }
+    .button:hover {
+        width: 100px;
+        transition: .3s;
+    }
+    .button:hover .plus {
+        opacity: 0;
+        transition: .3s;
+    }
+    .button:hover .show {
+        opacity: 0;
+        transition: .3s;
+        
+    }
+    .text {
+        opacity: 0;
+    }
+    .button:hover .text {
+        opacity: 1;
+        transition: .3s;
+    } */
