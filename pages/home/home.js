@@ -1,7 +1,6 @@
-render();
 const uploadedEl = document.querySelector(".uploaded ul");
 let uploaded = [];
-
+render();
 document.querySelector("#done-btn").addEventListener("click", () => {
   createPost();
 });
@@ -14,10 +13,6 @@ document.querySelector("#text-btn").addEventListener("click", () => {
       textEl.style.display = "none";
     }
   }
-});
-document.getElementById("edit-btn").addEventListener("click", () => {
-  console.log("ana hena");
-  window.location.href = "/pages/profile/edit.html";
 });
 document.querySelector("#upload-btn").addEventListener("click", () => {
   document.querySelector(".new-post").click();

@@ -4,9 +4,12 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 const wrapperEl = document.querySelector(".wrapper");
 users = JSON.parse(localStorage.getItem("users"));
 function render() {
+  console.log(users);
   if (users) {
     users.forEach((user, index) => {
+      console.log(user.id + " : " + loggedInUser.id);
       if (user.id !== loggedInUser.id) {
+        console.log("dakhlt el if");
         const html = `<div >   
         <img class="image-1" src=${
           user.img

@@ -32,6 +32,7 @@ document.querySelector("#save").addEventListener("click", () => {
   userLS.lastName = bean.lastname;
   userLS.bio = bean.bio;
   userLS.img = currentImagePath;
+  userLS.name = bean.firstName + " " + bean.lastname;
   localStorage.setItem("loggedInUser", JSON.stringify(userLS));
   const users = JSON.parse(localStorage.getItem("users"));
   users.forEach((user) => {
@@ -40,6 +41,7 @@ document.querySelector("#save").addEventListener("click", () => {
       user.lastName = bean.lastname;
       user.bio = bean.bio;
       user.img = currentImagePath;
+      user.name = bean.firstName + " " + bean.lastname;
     }
   });
   localStorage.setItem("users", JSON.stringify(users));
