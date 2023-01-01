@@ -81,11 +81,35 @@
                 <img src="/pages/profile/Images/pencil.png" alt="" />
               </button>
             </div>
-            <div class="posts"></div>
+            <div class="posts">
+              <div class="create">
+                <div class="title">
+                  <h3>new post</h3>
+                  <button id="text-btn">
+                    <img src="/pages/profile/Images/edit (1).png" alt="" />
+                  </button>
+                  <button id="upload-btn">
+                    <img src="/pages/profile/Images/file.png" alt="" />
+                  </button>
+
+                  <input type="file" class="new-post" />
+                </div>
+                <textarea type="text" class="input2" name="txt"></textarea>
+                <div class="uploaded">
+                  <ul></ul>
+                </div>
+                <div class="done">
+                  <button id="cancel-btn">Cancel</button>
+                  <button id="done-btn">Done</button>
+                </div>
+              </div>
+              <div class="created"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="/pages/profile/functions.js"></script>
     <script src="/pages/profile/script.js"></script>
   </body>
 </html>
