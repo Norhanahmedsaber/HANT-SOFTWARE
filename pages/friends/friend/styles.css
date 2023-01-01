@@ -52,3 +52,141 @@ img {
 .posts {
   font-size: 30px;
 }
+#delete-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+#delete-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+#update-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+#update-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+#download-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+#download-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+.user-info {
+  background-color: blueviolet;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  width: 698px;
+}
+.user-info button {
+  margin-left: auto;
+  margin-right: 0;
+}
+.user-info h3 {
+  display: inline;
+  font-size: 30px;
+  padding-left: 30px;
+}
+.post {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  padding: 30px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.files {
+  background-color: pink;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  margin-top: 5px;
+  width: 698px;
+}
+.files ul {
+  list-style: none;
+}
+.files ul li {
+  margin: 3px;
+}
+.item2 {
+  display: flex;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  margin-top: 10px;
+  width: 698px;
+}
+label {
+  padding: 10px;
+}
+.item2:last-child {
+  display: flex;
+  border-bottom: none;
+  font-size: 25px;
+}
+.created {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  flex-direction: column;
+}
+.posts {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  flex-direction: column;
+}
+textarea {
+  resize: none;
+  width: 700px;
+  height: 150px;
+  border-radius: 20px;
+  margin-top: 5px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: palegoldenrod;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  margin-bottom: 5px;
+  border: 1px solid black;
+  display: none;
+}

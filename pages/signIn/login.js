@@ -1,8 +1,8 @@
 let users = [];
 document.querySelector("#signin").addEventListener("click", function (e) {
- if(signin()){
-    window.location.href = "/pages/profile"
- }
+  if (signin()) {
+    window.location.href = "/pages/home";
+  }
 });
 function signin() {
   const emailEl = document.querySelector("#email-text").value;
@@ -14,13 +14,10 @@ function signin() {
   let exist = false;
   users.forEach((user) => {
     if (emailEl === user.email && passwordEl === user.password) {
-        localStorage.setItem("loggedInUser", JSON.stringify(user))
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
       exist = true;
       return;
     }
   });
- return exist;
-  
+  return exist;
 }
-
-

@@ -1,0 +1,349 @@
+.profile-picture {
+  display: inline-block;
+  width: 30%;
+}
+#pp {
+  width: 100%;
+  clip-path: circle(95px);
+  border: 10px solid black;
+  border-radius: 50%;
+}
+.info {
+  background-color: #b8c3d1;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+}
+.bio {
+  display: inline-block;
+  width: 50%;
+  position: relative;
+  top: 14%;
+  font-size: 40px;
+}
+h2 {
+  font-family: Comic Sans MS;
+}
+h3 {
+  font-family: Comic Sans MS;
+}
+.page {
+  display: flex;
+}
+#edit-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: #b8c3d1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+#edit-btn:hover {
+  cursor: pointer;
+  background-color: #8b98a9;
+  scale: (1.01);
+}
+img {
+  width: 100%;
+}
+.edit:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px black;
+}
+.posts {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  flex-direction: column;
+}
+.title {
+  background-color: blueviolet;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  width: 698px;
+}
+.title button {
+  margin-left: auto;
+  margin-right: 0;
+}
+.title h3 {
+  display: inline;
+  font-size: 30px;
+  padding-left: 30px;
+}
+textarea {
+  resize: none;
+  width: 700px;
+  height: 150px;
+  border-radius: 20px;
+  margin-top: 5px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: palegoldenrod;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  margin-bottom: 5px;
+  border: 1px solid black;
+  display: none;
+}
+#upload-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+#upload-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+.new-post {
+  display: none;
+}
+.uploaded {
+  background-color: pink;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  display: none;
+  margin-top: 5px;
+  width: 698px;
+}
+.uploaded ul {
+  list-style: none;
+}
+.uploaded ul li {
+  margin: 3px;
+}
+.item {
+  display: flex;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  margin-top: 10px;
+  width: 698px;
+}
+label {
+  padding: 10px;
+}
+.item:last-child {
+  display: flex;
+  border-bottom: none;
+  font-size: 25px;
+}
+.create {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+  width: 800px;
+  display: flex;
+  padding-left: 50px;
+  justify-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+#remove-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: pink;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+#remove-btn:hover {
+  cursor: pointer;
+  background-color: rgb(202, 124, 137);
+  scale: (1.01);
+}
+#text-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+#text-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+
+#done-btn {
+  width: 250px;
+  height: 40px;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(75, 75, 168);
+  transition: all 0.3s ease;
+  font-size: 25px;
+  margin: 20px;
+}
+#done-btn:hover {
+  cursor: pointer;
+  background-color: #8b98a9;
+  scale: (1.01);
+}
+#cancel-btn {
+  width: 250px;
+  height: 40px;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(168, 62, 62);
+  transition: all 0.3s ease;
+  font-size: 25px;
+  margin: 20px;
+}
+#cancel-btn:hover {
+  cursor: pointer;
+  background-color: #8b98a9;
+  scale: (1.01);
+}
+.done {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  width: 698px;
+  display: none;
+}
+.done button {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+#delete-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+#delete-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+#update-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+#update-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+#download-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+#download-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+.user-info {
+  background-color: blueviolet;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  width: 698px;
+}
+.user-info button {
+  margin-left: auto;
+  margin-right: 0;
+}
+.user-info h3 {
+  display: inline;
+  font-size: 30px;
+  padding-left: 30px;
+}
+.post {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  padding: 30px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.files {
+  background-color: pink;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  margin-top: 5px;
+  width: 698px;
+}
+.files ul {
+  list-style: none;
+}
+.files ul li {
+  margin: 3px;
+}
+.item2 {
+  display: flex;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  margin-top: 10px;
+  width: 698px;
+}
+label {
+  padding: 10px;
+}
+.item2:last-child {
+  display: flex;
+  border-bottom: none;
+  font-size: 25px;
+}
+.created {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  flex-direction: column;
+}

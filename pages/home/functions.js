@@ -1,13 +1,8 @@
 function render() {
-  renderInfo();
   renderPosts();
 }
 const user = JSON.parse(localStorage.getItem("loggedInUser"));
-let info = {
-  name: user.name,
-  bio: user.bio,
-  imgURL: user.img,
-};
+const users = JSON.parse(localStorage.getItem("users"));
 function getNow() {
   var today = new Date();
   var date =
@@ -58,27 +53,25 @@ function createPost() {
   }
   renderPosts();
 }
-function renderInfo() {
-  const ppEl = document.querySelector(".profile-picture");
-  const infoEl = document.querySelector(".bio");
-  const imgEl = document.createElement("img");
-  imgEl.setAttribute("src", info.imgURL);
-  imgEl.setAttribute("id", "pp");
-  const nameEl = document.createElement("h2");
-  const bioEl = document.createElement("h3");
-  nameEl.textContent = info.name;
-  bioEl.textContent = info.bio;
 
-  ppEl.appendChild(imgEl);
-  infoEl.appendChild(nameEl);
-  infoEl.appendChild(bioEl);
-}
 function renderPosts() {
   const createdEl = document.querySelector(".created");
   createdEl.innerHTML = "";
-  if (user.posts) {
-    if (user.posts.length !== 0) {
-      user.posts.forEach((post) => {
+  let posts = [];
+  users.forEach((cuser) => {
+    if (cuser.posts) {
+      cuser.posts.forEach((post) => {
+        posts.push(post);
+      });
+    }
+  });
+  console.log();
+  posts = posts.sort(
+    (a, b) => new Date(b.creationData) - new Date(a.creationData)
+  );
+  if (posts) {
+    if (posts.length !== 0) {
+      posts.forEach((post) => {
         createdEl.appendChild(renderPost(post));
       });
     }
@@ -98,21 +91,8 @@ function renderPost(post) {
   const dateEl = document.createElement("h5");
   dateEl.id = "date";
   dateEl.textContent = post.creationDate;
-  console.log(dateEl.textContent);
-  const deleteBtn = document.createElement("button");
-  deleteBtn.id = "delete-btn";
-  const deleteIcon = document.createElement("img");
-  deleteIcon.setAttribute("src", "/pages/profile/Images/delete (2).png");
-  deleteBtn.appendChild(deleteIcon);
-  const updateBtn = document.createElement("button");
-  updateBtn.id = "update-btn";
-  const updateIcon = document.createElement("img");
-  updateIcon.setAttribute("src", "/pages/profile/Images/edit (1).png");
-  updateBtn.appendChild(updateIcon);
   infoEl.appendChild(titleEl);
   infoEl.appendChild(dateEl);
-  infoEl.appendChild(updateBtn);
-  infoEl.appendChild(deleteBtn);
 
   const textEl = document.createElement("textarea");
   textEl.setAttribute("type", "text");

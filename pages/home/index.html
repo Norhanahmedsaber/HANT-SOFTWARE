@@ -1,42 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/sidebar/styles.css" rel="stylesheet"></link>
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/pages/home/styles.css" />
+    <link href="/sidebar/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Sidebar</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="side-nav">
-            <ul class="nav-list">
-                <li><a href="/pages/home/index.html"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
-                <li><a href="/pages/profile/index.html"><i class="fa-solid fa-user"></i><p>Profile</p></a></li>
-                <li><a href="/pages/friends/index.html"><i class="fa-solid fa-user-group"></i><p>Friends</p></a></li>
-                <li><a href="/pages/groups/index.html"><i class="fa-solid fa-people-group"></i><p>Groups</p></a></li>
-                <li><a href="/pages/signIn/index.html"><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a></li>
-                <div class="active"></div>
-            </ul>
+      <div class="side-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="/pages/home/index.html"
+              ><i class="fa-solid fa-house"></i>
+              <p>Home</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/profile/index.html"
+              ><i class="fa-solid fa-user"></i>
+              <p>Profile</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/friends/index.html"
+              ><i class="fa-solid fa-user-group"></i>
+              <p>Friends</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/groups/index.html"
+              ><i class="fa-solid fa-people-group"></i>
+              <p>Groups</p></a
+            >
+          </li>
+          <li>
+            <a href="/pages/signIn/index.html"
+              ><i class="fa-solid fa-right-from-bracket"></i>
+              <p>Logout</p></a
+            >
+          </li>
+          <div class="active"></div>
+        </ul>
+      </div>
+      <div class="page">
+        <div class="search-bar">
+          <a href="#" class="logo">
+            <img src="/sidebar/logo.png" class="logo-img" />
+          </a>
+          <div class="box">
+            <form name="search">
+              <input
+                type="text"
+                class="input"
+                name="txt"
+                onmouseout="this.value = ''; this.blur();"
+              />
+            </form>
+            <i class="fas fa-search"></i>
+          </div>
         </div>
-        <div class="page">
-            <div class="search-bar">
-                <a href="#" class="logo">
-                    <img src="/sidebar/logo.png" class="logo-img">
-                </a>
-                <div class="box">
-                    <form name="search">
-                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                    </form>
-                    <i class="fas fa-search"></i>
-                
-                </div>
+        <div class="wrapper">
+          <div class="posts">
+            <div class="create">
+              <div class="title">
+                <h3>new post</h3>
+                <button id="text-btn">
+                  <img src="/pages/profile/Images/edit (1).png" alt="" />
+                </button>
+                <button id="upload-btn">
+                  <img src="/pages/profile/Images/file.png" alt="" />
+                </button>
+                <input type="file" class="new-post" />
+              </div>
+              <textarea type="text" class="input2" name="txt"></textarea>
+              <div class="uploaded">
+                <ul></ul>
+              </div>
+              <div class="done">
+                <button id="cancel-btn">Cancel</button>
+                <button id="done-btn">Done</button>
+              </div>
             </div>
-            <div class="wrapper">
-                <p>Home Page Works!</p>
-            </div>
+            <div class="created"></div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <script src="/scripts/UUID.js"></script>
+    <script src="/pages/home/functions.js"></script>
+    <script src="/pages/home/home.js"></script>
+  </body>
 </html>
