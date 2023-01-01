@@ -29,19 +29,32 @@ function createPost() {
     files,
   };
   const users = JSON.parse(localStorage.getItem("users"));
-  users.forEach((cuser) => {
-    if (cuser.id === user.id) {
-      if (cuser.posts) {
-        cuser.posts.unshift(post);
-      } else {
-        const beanList = [];
-        beanList.push(post);
-        cuser.posts = beanList;
+  if (post.files.length !== 0 || post.text.length !== 0) {
+    users.forEach((cuser) => {
+      if (cuser.id === user.id) {
+        if (cuser.posts) {
+          cuser.posts.unshift(post);
+        } else {
+          const beanList = [];
+          beanList.push(post);
+          cuser.posts = beanList;
+        }
+        return;
       }
-      return;
+    });
+    if (user.posts) {
+      user.posts.unshift(post);
+    } else {
+      const beanList = [];
+      beanList.push(post);
+      user.posts = beanList;
     }
-  });
-  localStorage.setItem("users", users);
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+    localStorage.setItem("users", JSON.stringify(users));
+    document.querySelector(".input2").value = "";
+    uploaded = [];
+    renderUploaded();
+  }
 }
 function renderInfo() {
   const ppEl = document.querySelector(".profile-picture");
