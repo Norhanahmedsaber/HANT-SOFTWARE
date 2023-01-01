@@ -51,5 +51,169 @@ img {
 }
 .posts {
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.title {
+  background-color: blueviolet;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  width: 698px;
+}
+.title button {
+  margin-left: auto;
+  margin-right: 0;
+}
+.title h3 {
+  display: inline;
+  font-size: 30px;
+  padding-left: 30px;
+}
+textarea {
+  resize: none;
+  width: 700px;
+  height: 150px;
+  border-radius: 20px;
+  margin-top: 5px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: palegoldenrod;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+#upload-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+#upload-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
+}
+.new-post {
+  display: none;
+}
+.uploaded {
+  background-color: pink;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  display: none;
+  margin-top: 5px;
+}
+.uploaded ul {
+  list-style: none;
+}
+.uploaded ul li {
+  margin: 3px;
+}
+.item {
+  display: flex;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  margin-top: 10px;
+}
+label {
+  padding: 10px;
+}
+.item:last-child {
+  display: flex;
+  border-bottom: none;
+  font-size: 25px;
+}
+.create {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+}
+#remove-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: pink;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 80px;
+}
+#remove-btn:hover {
+  cursor: pointer;
+  background-color: rgb(202, 124, 137);
+  scale: (1.01);
+}
+#text-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+#text-btn:hover {
+  cursor: pointer;
+  background-color: rgb(88, 7, 164);
+  scale: (1.01);
 }
 
+#done-btn {
+  width: 250px;
+  height: 40px;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(75, 75, 168);
+  transition: all 0.3s ease;
+  font-size: 25px;
+  margin: 20px;
+}
+#done-btn:hover {
+  cursor: pointer;
+  background-color: #8b98a9;
+  scale: (1.01);
+}
+#cancel-btn {
+  width: 250px;
+  height: 40px;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(168, 62, 62);
+  transition: all 0.3s ease;
+  font-size: 25px;
+  margin: 20px;
+}
+#cancel-btn:hover {
+  cursor: pointer;
+  background-color: #8b98a9;
+  scale: (1.01);
+}
+.done {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  width: 698px;
+}
+.done button {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
