@@ -1,6 +1,4 @@
 let users = [];
-
-
 document.querySelector("#signin").addEventListener("click", function (e) {
  if(signin()){
     window.location.href = "/pages/profile"
@@ -24,3 +22,5 @@ function signin() {
  return exist;
   
 }
+
+
