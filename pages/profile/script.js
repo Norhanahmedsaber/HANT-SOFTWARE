@@ -27,4 +27,3 @@ document.querySelector(".new-post").addEventListener("input", (e) => {
   renderUploaded();
 });
 document.querySelector(".input2").addEventListener("input", () => {});
-
