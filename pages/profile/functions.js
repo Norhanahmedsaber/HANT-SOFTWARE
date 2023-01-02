@@ -4,11 +4,12 @@ function render() {
   renderPosts();
 }
 function deletePost (id){
-  
+  posts = user.posts;
   posts.forEach((post,index)=>{
     if(post.id === id)
     {
       posts.splice(index , 1);
+      return;
     }
   })
   user.posts=posts;
@@ -84,7 +85,7 @@ function getNow() {
 function createPost() {
   const files = [];
   uploaded.forEach((file) => {
-    files.push("/pages/profile/postsFiles/" + file);
+    files.push("/pages/profile/postsFiles" + file);
   });
   const post = {
     id: uuid(),
@@ -232,6 +233,7 @@ function renderPost(post) {
       li.querySelector("#download-btn").style.display = "inline-block";
     })
     updatePost(uploaded, post.id);
+    renderPosts();
   })
   let uploaded = [];
   post.files.forEach((file) => {
@@ -296,9 +298,9 @@ function renderPost(post) {
   listEl.style.display = "block";
   post.files.forEach((file) => {
     const itemEl = document.createElement("li");
-    itemEl.id = file.substring(25)
-    itemEl.innerHTML = file.substring(25);
-
+    itemEl.id = file.substring(25);
+    let str = encodeURIComponent(itemEl.id);
+    itemEl.innerHTML = `<a href=/pages/profile/postFiles/${str} target="_blank">` + file.substring(25) +"</a>";
     const labelEl = document.createElement("span");
     labelEl.classList.add("cancel");
     const iEl = document.createElement("i");
@@ -316,6 +318,12 @@ function renderPost(post) {
     buttonEl.setAttribute("id", "download-btn");
     const iconEl = document.createElement("img");
     iconEl.setAttribute("src", "/pages/profile/Images/download.png");
+    buttonEl.addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.download = itemEl.id;
+      link.href = "/pages/profile/postFiles/" + itemEl.id;
+      link.click();
+    })
     buttonEl.appendChild(iconEl);
     itemEl.appendChild(deleteFileEl);
     itemEl.appendChild(buttonEl);
@@ -371,8 +379,6 @@ function date(d) {
   };
 
   const date2 = getNow();
-
-  console.log(date2 - date1);
   if (isNaN(date2.year - date1.year)) return "just now";
   else if (date2.year - date1.year !== 0) {
     return date2.year - date1.year + " year ago";
