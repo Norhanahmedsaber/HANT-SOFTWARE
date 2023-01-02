@@ -1,8 +1,9 @@
 let users = [];
 const userslls = JSON.parse(localStorage.getItem("users"));
-const messageEl = document.getElementById("message");
+const messageEl = document.getElementById("errorMessage");
 let aEL = document.createElement("a");
 const aM = document.createTextNode("login");
+
 aEL.appendChild(aM);
 if (userslls) {
   users = userslls;
@@ -65,27 +66,31 @@ function checkValidations(
   confirmedPassword
 ) {
   if (!containsOnlyLetters(firstName)) {
+    messageEl.textContent = "Please enter Letters only";
     return false;
   } else if (firstName.length <= 0) {
-    //error msg
+    messageEl.textContent = "It can't be empty";
     return false;
   } else if (!containsOnlyLetters(lastName)) {
-    //error msg
+    messageEl.textContent = "Please enter Letters only";
     return false;
   } else if (lastName.length <= 0) {
-    //error msg
+    messageEl.textContent = "It can't be empty";
+
     return false;
   } else if (!isEmail(email)) {
-    // error msg
+    messageEl.textContent = "It's not email";
+
     return false;
   } else if (email.length <= 0) {
-    // error msg
+    messageEl.textContent = "It can't be empty";
     return false;
   } else if (password !== confirmedPassword) {
-    //error msg
+    messageEl.textContent = "don't match";
     return false;
   } else if (password.length <= 0) {
-    //error msg
+    messageEl.textContent = "It can't be empty";
     return false;
-  } else return true;
+  } else messageEl.textContent = " ";
+  return true;
 }

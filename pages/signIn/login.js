@@ -1,3 +1,4 @@
+const messageEl = document.getElementById("errorMessage");
 let users = [];
 document.querySelector("#signin").addEventListener("click", function (e) {
   e.preventDefault();
@@ -20,11 +21,11 @@ function signin() {
 
 function checkValidations(emailEl, passwordEl, users) {
   if (emailEl.length <= 0) {
-    //error msg
+    messageEl.textContent = "it can't be empty";
     return false;
   }
   if (passwordEl.length <= 0) {
-    //error msg
+    messageEl.textContent = "it can't be empty";
     return false;
   }
   let exist = false;
@@ -34,7 +35,8 @@ function checkValidations(emailEl, passwordEl, users) {
       exist = true;
     }
   });
-  // error msg
+  messageEl.textContent = "Account not found";
+
   resetPage();
   return exist;
 }
