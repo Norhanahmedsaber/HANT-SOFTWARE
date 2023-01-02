@@ -91,14 +91,22 @@ function renderPost(post) {
 
   const labelEl = document.createElement("label");
   labelEl.textContent = post.authorName;
+  labelEl.classList.add("name")
   const labelDateEl = document.createElement("label");
   labelDateEl.textContent = date(post.creationData);
+  labelEl.classList.add("date")
   const img=document.createElement("img");
-  if(! users.img){
-    users.img = "/pages/friends/images/585e4bf3cb11b227491c339a.png";
-  }
-  img.setAttribute("src", users.img);
-  img.setAttribute("alt","personal image");
+  let image;
+  users.forEach((u)=> {
+    if(post.authorId === u.id) {
+      if(!u.img){
+        u.img = "/pages/friends/images/585e4bf3cb11b227491c339a.png";
+      }
+      img.setAttribute("src", u.img);
+    }
+  })
+  
+  img.setAttribute("class","personalPhoto");
 
   img.classList.add("img-icon");
   headerEl.appendChild(img);
