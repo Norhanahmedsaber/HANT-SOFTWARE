@@ -1,4 +1,5 @@
 const uploadedEl = document.querySelector(".list ul");
+
 let uploaded = [];
 render();
 document.querySelector("#post").addEventListener("click", () => {
@@ -24,3 +25,4 @@ document.querySelector(".new-post").addEventListener("input", (e) => {
 document.querySelector(".input2").addEventListener("input", () => {
   checkForButtons();
 });
+

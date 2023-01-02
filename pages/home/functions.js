@@ -88,6 +88,16 @@ function renderPost(post) {
   const labelEl = document.createElement("label");
   labelEl.textContent = post.authorName;
 
+  const img=document.createElement("img");
+  if(! users.img){
+    users.img = "/pages/friends/images/585e4bf3cb11b227491c339a.png";
+  }
+  img.setAttribute("src", users.img);
+  img.setAttribute("alt","personal image");
+
+  img.classList.add("img-icon");
+  headerEl.appendChild(img);
+
   const updateEl = document.createElement("button");
   updateEl.id = "update-btn";
   const updateIcon = document.createElement("img");

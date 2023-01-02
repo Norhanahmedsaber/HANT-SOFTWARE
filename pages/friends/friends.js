@@ -20,8 +20,7 @@ function render() {
         <img class="image-1" src=${
           user.img
         } alt="personal image" title="friend name">
-        <p class="name">${user.name} </p>
-        <button id="no${index}" class="edit-btn" title="Show profile">
+        <a href="/pages/friends/friend/?id=${user.id}" class="name">${user.name}</a>        <button id="no${index}" class="edit-btn" title="Show profile">
             <a href=${`/pages/friends/friend/?id=${user.id}`}><img src="images/headhunting.png" alt="show profile" /></a>
         </button>
         <hr>
@@ -53,5 +52,4 @@ render();
   });
 
 
- 
 
