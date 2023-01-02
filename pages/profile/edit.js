@@ -45,5 +45,10 @@ document.querySelector("#save").addEventListener("click", () => {
     }
   });
   localStorage.setItem("users", JSON.stringify(users));
+  window.location.href = "/pages/profile";
+});
+
+document.querySelector("#cancel").addEventListener("click", () => {
+  window.location.href = "/pages/profile";
 });
 render();
