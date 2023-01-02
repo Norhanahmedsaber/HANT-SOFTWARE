@@ -202,7 +202,23 @@ label {
   background-color: rgb(141, 131, 151);
   scale: (1.01);
 }
-
+#doneEdit-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-right: 100px;
+}
+#doneEdit-btn:hover {
+  cursor: pointer;
+  background-color: rgb(141, 131, 151);
+  scale: (1.01);
+}
 #done-btn {
   width: 250px;
   height: 40px;
