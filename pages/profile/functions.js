@@ -233,10 +233,6 @@ function renderPost(post) {
     })
     updatePost(uploaded, post.id);
   })
-  const updateEl = document.createElement("button");
-  updateEl.id = "update-btn";
-  const updateIcon = document.createElement("img");
-  updateIcon.setAttribute("src", "/pages/profile/Images/edit (1).png")
   let uploaded = [];
   post.files.forEach((file) => {
     uploaded.push(file.substring(25))

@@ -7,7 +7,6 @@
   top: 10px;
   padding-top: 10px;
 }
-
 .name {
   margin-left: 10px;
   margin-right: 80px;
@@ -21,11 +20,18 @@
   display: flexbox;
   flex-direction: row;
   width: 80%;
-  margin-top: 60px;
+  margin-top: auto;
   padding: 10px;
   font-size: 40px;
 }
+.wrapper h1{
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  font-family: Comic Sans MS;
+  font-size: 100px;
 
+}
 .edit-btn {
   width: 50px;
   height: 50px;
@@ -52,46 +58,3 @@ img {
   cursor: pointer;
   box-shadow: 0px 0px 10px black;
 }
-/* .button {
-        background-color: rgb(78, 180, 203);
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        display: inline-flex;
-        align-items: center;
-        transition: .3s;
-        overflow: hidden;
-        cursor: pointer;
-        color: #fff;
-        position: relative;
-        float: right;
-        top: 35px;
-        margin-left: 30px;
-
-    }
-    .plus,.show, .text {
-        transition: .3s;
-        font-size: small;
-        display: inline-block;
-        text-align: center;
-    }
-    .button:hover {
-        width: 100px;
-        transition: .3s;
-    }
-    .button:hover .plus {
-        opacity: 0;
-        transition: .3s;
-    }
-    .button:hover .show {
-        opacity: 0;
-        transition: .3s;
-        
-    }
-    .text {
-        opacity: 0;
-    }
-    .button:hover .text {
-        opacity: 1;
-        transition: .3s;
-    } */
