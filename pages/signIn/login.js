@@ -1,5 +1,6 @@
 let users = [];
 document.querySelector("#signin").addEventListener("click", function (e) {
+  e.preventDefault();
   if (signin()) {
     window.location.href = "/pages/home";
   }

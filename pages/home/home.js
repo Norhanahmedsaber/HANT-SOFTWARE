@@ -1,7 +1,7 @@
-const uploadedEl = document.querySelector(".uploaded ul");
+const uploadedEl = document.querySelector(".list ul");
 let uploaded = [];
 render();
-document.querySelector("#done-btn").addEventListener("click", () => {
+document.querySelector("#post").addEventListener("click", () => {
   createPost();
 });
 document.querySelector("#text-btn").addEventListener("click", () => {

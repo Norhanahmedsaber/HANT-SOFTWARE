@@ -60,17 +60,6 @@
           <a href="#" class="logo">
             <img src="/sidebar/logo.png" class="logo-img" />
           </a>
-          <div class="box">
-            <form name="search">
-              <input
-                type="text"
-                class="input"
-                name="txt"
-                onmouseout="this.value = ''; this.blur();"
-              />
-            </form>
-            <i class="fas fa-search"></i>
-          </div>
         </div>
         <div class="wrapper">
           <div class="profile">
@@ -82,9 +71,9 @@
               </button>
             </div>
             <div class="posts">
-              <div class="create">
-                <div class="title">
-                  <h3>new post</h3>
+              <section class="post">
+                <header class="create-title">
+                  <label>Create Post</label> 
                   <button id="text-btn">
                     <img src="/pages/profile/Images/edit (1).png" alt="" />
                   </button>
@@ -92,16 +81,14 @@
                     <img src="/pages/profile/Images/file.png" alt="" />
                   </button>
                   <input type="file" class="new-post" />
-                </div>
-                <textarea type="text" class="input2" name="txt"></textarea>
-                <div class="uploaded">
-                  <ul></ul>
-                </div>
-                <div class="done">
-                  <button id="cancel-btn">Cancel</button>
-                  <button id="done-btn">Done</button>
-                </div>
-              </div>
+                </header>
+                
+                <form action="#">
+                  <textarea class="input2" placeholder="What's in your head?" spellcheck="false" required></textarea>
+                  <button id="post">Post</button>
+                </form>
+                <div class="list"><ul></ul></div>
+              </section>
               <div class="created"></div>
             </div>
           </div>

@@ -1,3 +1,8 @@
+.wrapper {
+  position: relative;
+  z-index: 0;
+}
+
 .profile-picture {
   display: inline-block;
   width: 30%;
@@ -25,7 +30,9 @@ h2 {
 h3 {
   font-family: Comic Sans MS;
 }
-
+.page {
+  display: flex;
+}
 #edit-btn {
   width: 50px;
   height: 50px;
@@ -50,7 +57,165 @@ img {
   box-shadow: 0px 0px 10px black;
 }
 .posts {
+  position: relative;
+  top: 7%;
+  left: 16%;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  z-index: 0;
+}
+.title {
+  background-color: blueviolet;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  width: 698px;
+}
+.title button {
+  margin-left: auto;
+  margin-right: 0;
+}
+.title h3 {
+  display: inline;
+  font-size: 30px;
+  padding-left: 30px;
+}
+#post {
+  border: 1.5px solid rgb(53, 53, 53);
+}
+textarea {
+  resize: none;
+  width: 700px;
+  height: 150px;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: rgb(243, 242, 226);
+  margin-bottom: 30px;
+  border: 1px solid rgb(202, 200, 167);
+  display: none;
+}
+#upload-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-right: 70px;
+}
+#upload-btn:hover {
+  cursor: pointer;
+  background-color: rgb(141, 131, 151);
+  scale: (1.01);
+}
+.create-title {
+  position: relative;
+}
+.create-title label {
+  margin-right: 350px;
+}
+.new-post {
+  display: none;
+}
+.uploaded {
+  background-color: pink;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  display: none;
+  margin-top: 5px;
+  width: 698px;
+}
+.uploaded ul {
+  list-style: none;
+}
+.uploaded ul li {
+  margin: 3px;
+}
+.item {
+  display: flex;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  margin-top: 10px;
+  width: 698px;
+}
+label {
+  padding: 10px;
+}
+.item:last-child {
+  display: flex;
+  border-bottom: none;
+  font-size: 25px;
+}
+.create {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+  width: 800px;
+  display: flex;
+  padding-left: 50px;
+  justify-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+#remove-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: white;
+  border-radius: 10%;
+  transition: all 0.3s ease;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+#remove-btn:hover {
+  cursor: pointer;
+  background-color: rgb(141, 131, 151);
+  scale: (1.01);
+}
+#text-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  left: 12%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+#text-btn:hover {
+  cursor: pointer;
+  background-color: rgb(141, 131, 151);
+  scale: (1.01);
+}
+
+#done-btn {
+  width: 250px;
+  height: 40px;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(75, 75, 168);
+  transition: all 0.3s ease;
+  font-size: 25px;
+  margin: 20px;
+}
+.created textarea {
+  display: block;
 }
 #delete-btn {
   width: 45px;
@@ -58,8 +223,8 @@ img {
   position: relative;
   left: 12%;
   border: none;
-  background-color: blueviolet;
-  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
   transition: all 0.3s ease;
   padding: 10px;
   margin-left: 10px;
@@ -67,7 +232,7 @@ img {
 }
 #delete-btn:hover {
   cursor: pointer;
-  background-color: rgb(88, 7, 164);
+  background-color: rgb(141, 131, 151);
   scale: (1.01);
 }
 #update-btn {
@@ -76,16 +241,15 @@ img {
   position: relative;
   left: 12%;
   border: none;
-  background-color: blueviolet;
-  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
   transition: all 0.3s ease;
   padding: 10px;
   margin-left: 10px;
-  margin-right: 100px;
 }
 #update-btn:hover {
   cursor: pointer;
-  background-color: rgb(88, 7, 164);
+  background-color: rgb(141, 131, 151);
   scale: (1.01);
 }
 #download-btn {
@@ -94,8 +258,8 @@ img {
   position: relative;
   left: 12%;
   border: none;
-  background-color: blueviolet;
-  border-radius: 50%;
+  background-color: white;
+  border-radius: 10%;
   transition: all 0.3s ease;
   padding: 10px;
   margin-left: auto;
@@ -103,7 +267,7 @@ img {
 }
 #download-btn:hover {
   cursor: pointer;
-  background-color: rgb(88, 7, 164);
+  background-color: rgb(141, 131, 151);
   scale: (1.01);
 }
 .user-info {
@@ -124,14 +288,16 @@ img {
   padding-left: 30px;
 }
 .post {
-  border: 2px solid black;
   border-radius: 20px;
   background-color: white;
-  padding: 30px;
+  padding: 20px;
+  padding-left: 50px;
   width: 800px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
 }
 .files {
   background-color: pink;
@@ -164,29 +330,202 @@ label {
   font-size: 25px;
 }
 .created {
+  width: 802px;
   display: flex;
   justify-content: center;
-  border: 2px solid black;
   flex-direction: column;
 }
-.posts {
-  font-size: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-top: 30px;
-  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(#0051ff, #007bff);
 }
-textarea {
+::selection{
+  color: #fff;
+  background: #4267B2;
+}
+.container{
+  width: 500px;
+  height: 480px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  transition: height 0.2s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.container.active{
+  height: 590px;
+}
+.container .wrapper{
+  width: 1000px;
+  display: flex;
+}
+.container .wrapper section{
+  width: 500px;
+  background: #fff;
+}
+.container img{
+  cursor: pointer;
+}
+.container .post{
+  transition: margin-left 0.18s ease;
+}
+.container.active .post{
+  margin-left: -500px;
+}
+.post header{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 17px 0;
+  text-align: center;
+  border-bottom: 1px solid #bfbfbf;
+}
+.post form{
+  margin: 20px 25px;
+}
+.post form .content,
+.audience .list li .column{
+  display: flex;
+  align-items: center;
+}
+.post form .content img{
+  cursor: default;
+  max-width: 52px;
+}
+.post form .content .details{
+  margin: -3px 0 0 12px;
+}
+form .content .details p{
+  font-size: 17px;
+  font-weight: 500;
+}
+.content .details .privacy{
+  display: flex;
+  height: 25px;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 11px;
+  margin-top: 3px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 98px;
+  background: #E4E6EB;
+  justify-content: space-between;
+}
+.details .privacy span{
+  font-size: 13px;
+  margin-top: 1px;
+  font-weight: 500;
+}
+.details .privacy i:last-child{
+  font-size: 13px;
+  margin-left: 1px;
+}
+form :where(textarea, button){
+  width: 100%;
+  outline: none;
+}
+form textarea{
   resize: none;
-  width: 700px;
-  height: 150px;
-  border-radius: 20px;
-  margin-top: 5px;
-  font-size: 30px;
-  padding: 10px;
-  background-color: palegoldenrod;
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.35);
-  margin-bottom: 5px;
-  border: 1px solid black;
+  font-size: 18px;
+  margin-top: 10px;
+  min-height: 100px;
+}
+form textarea::placeholder{
+  color: #858585;
+}
+form textarea:focus::placeholder{
+  color: #b3b3b3;
+}
+form :where(.theme-emoji, .options){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme-emoji img:last-child{
+  max-width: 24px;
+}
+
+form .options :where(.list, li),
+.audience :where(.arrow-back, .icon, li .radio){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .options p{
+  color: #595959;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: default;
+}
+form .options .list{
+  list-style: none;
+}
+.options .list li{
+  height: 42px;
+  width: 42px;
+  margin: 0 -1px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.options .list li:hover{
+  background: #f0f1f4;
+}
+.options .list li img{
+  width: 23px;
+}
+form button{
+  height: 53px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #BCC0C4;
+  cursor: no-drop;
+  border-radius: 7px;
+  background: #e2e5e9;
+  transition: all 0.3s ease;
+}
+form textarea:valid ~ button{
+  color: #fff;
+  cursor: pointer;
+  background: #4267B2;
+}
+form textarea:valid ~ button:hover{
+  background: #4267B2;
+}
+
+.list  {
+  margin-left: 30px;
+  overflow: hidden;
   display: none;
 }
+.list ul {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0em;
+  text-indent: 0em;
+}
+.list li {
+  display: flex;
+  font-size: 20px;
+}
+.list li .icon{
+  margin-left: 0;
+  margin-right: auto;
+}
+.list li .cancel{
+  margin-right: 0;
+  margin-left: auto;
+}
+
+

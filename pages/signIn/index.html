@@ -5,35 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/pages/signIn/styles.css" rel="stylesheet"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <title> Sign in </title>
 </head>
 <body>
-   <div class="login-form">
-    
-        <h1>HANT</h1>
-        <div class="email">
-            <label class="label">Email: </label>
-            <input id="email-text" type="text" placeholder="email">
-         </div>
-         <div class="password">
-            <label>Password:</label>
-            <input id="password-text" type="password" placeholder="password">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Welcome to HANT</h3>
+        <label class="label" for="email-text">Email</label>
+        <input id="email-text" type="text" placeholder="Email">
+        <label for="password-text">Password</label>
+        <input id="password-text" type="password" placeholder="Password">
+        <button id="signin"> Sign In </button>
+        <div>
+            <label>Don't have an account?</label>
+            <a href="/pages/signUp/">Sign Up</a>
         </div>
-       
-        <!-- forget your password option -->
-        <div class="button">
-            <button id="signin"> SignIN </button>
-    </div>
-    <div>
-        <label>if you don't have an account ?</label>
-        <a href="/pages/signUp/">New Account</a>
-    </div>
-
-
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i>  Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </form>
     
-
-   </div>
-   <script src="/pages/signIn/login.js"></script>
-    
+    <script src="/pages/signIn/login.js"></script>
 </body>
 </html>

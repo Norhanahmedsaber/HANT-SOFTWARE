@@ -37,47 +37,68 @@ function renderPosts(id) {
 }
 
 function renderPost(post) {
-  const postEl = document.createElement("div");
+  const postEl = document.createElement("section");
   postEl.classList.add("post");
   postEl.id = post.id;
 
-  const infoEl = document.createElement("div");
-  infoEl.classList.add("user-info");
+  const headerEl = document.createElement("header");
+  headerEl.classList.add("create-title");
 
-  const titleEl = document.createElement("h4");
-  titleEl.id = "title";
-  titleEl.textContent = post.authorName;
-  const dateEl = document.createElement("h5");
-  dateEl.id = "date";
-  dateEl.textContent = post.creationDate;
-  infoEl.appendChild(titleEl);
-  infoEl.appendChild(dateEl);
+  const labelEl = document.createElement("label");
+  labelEl.textContent = post.authorName;
 
-  const textEl = document.createElement("textarea");
-  textEl.setAttribute("type", "text");
-  textEl.setAttribute("name", "txt");
-  textEl.readOnly = true;
-  textEl.innerHTML = post.text;
-  textEl.style.display = "block";
-  const filesEl = document.createElement("div");
-  filesEl.classList.add("files");
+  const updateEl = document.createElement("button");
+  updateEl.id = "update-btn";
+  const updateIcon = document.createElement("img");
+  updateIcon.setAttribute("src", "/pages/profile/Images/edit (1).png")
+  updateEl.appendChild(updateIcon);
+
+  const deleteEl = document.createElement("button");
+  deleteEl.id = "delete-btn";
+  const deleteIcon = document.createElement("img");
+  deleteIcon.setAttribute("src", "/pages/profile/Images/delete (2).png")
+  deleteEl.appendChild(deleteIcon);
+
+  headerEl.appendChild(labelEl);
+  headerEl.appendChild(updateEl);
+  headerEl.appendChild(deleteEl);
+
+  const formEl = document.createElement("form");
+  formEl.setAttribute("action", "#");
+  const textAreaEl = document.createElement("textarea");
+  textAreaEl.classList.add("input2");
+  textAreaEl.readOnly = true;
+  textAreaEl.setAttribute("type", "text");
+  textAreaEl.setAttribute("name", "txt");
+  textAreaEl.innerHTML = post.text;
+  textAreaEl.style.display = "block";
+  
+  formEl.appendChild(textAreaEl);
+
+  const listEl = document.createElement("div");
+  listEl.classList.add("list");
+  listEl.style.display = "block"
   post.files.forEach((file) => {
-    const item2El = document.createElement("div");
-    item2El.id = "item2";
-    const aEl = document.createElement("a");
-    aEl.setAttribute("href", file);
-    aEl.innerHTML = file.substring(26);
-    const downloadButton = document.createElement("button");
-    downloadButton.id = "download-btn";
-    const downloadIcon = document.createElement("img");
-    downloadIcon.setAttribute("src", "/pages/profile/Images/download.png");
-    downloadButton.appendChild(downloadIcon);
-    item2El.appendChild(aEl);
-    item2El.appendChild(downloadButton);
-    filesEl.appendChild(item2El);
+    const itemEl = document.createElement("li");
+    itemEl.id = file.substring(26)
+    itemEl.innerHTML = file.substring(26);
+    const labelEl = document.createElement("span");
+    labelEl.classList.add("cancel");
+    const iEl = document.createElement("i");
+    labelEl.appendChild(iEl);
+    itemEl.appendChild(labelEl);
+    const buttonEl = document.createElement("button");
+    buttonEl.setAttribute("id", "download-btn");
+    const iconEl = document.createElement("img");
+    iconEl.setAttribute("src", "/pages/profile/Images/download.png");
+    buttonEl.appendChild(iconEl);
+    itemEl.appendChild(buttonEl);
+    listEl.appendChild(itemEl);
+    
+    
   });
-  postEl.appendChild(infoEl);
-  postEl.appendChild(textEl);
-  postEl.appendChild(filesEl);
+  postEl.appendChild(headerEl);
+  postEl.appendChild(formEl);
+  postEl.appendChild(listEl);
   return postEl;
 }

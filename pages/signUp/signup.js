@@ -7,7 +7,8 @@ aEL.appendChild(aM);
 if (userslls) {
   users = userslls;
 }
-document.querySelector("#signup").addEventListener("click", () => {
+document.querySelector("#signup").addEventListener("click", (e) => {
+  e.preventDefault();
   signup();
   resetPage();
 });
