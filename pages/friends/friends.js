@@ -2,7 +2,7 @@ let users = [];
 
 const table = document.querySelector(".div-table");
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-const wrapperEl = document.querySelector(".wrapper");
+// const wrapperEl = document.querySelector(".wrapper");
 users = JSON.parse(localStorage.getItem("users"));
 
 let filteredUsers=users;
