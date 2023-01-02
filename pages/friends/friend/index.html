@@ -60,17 +60,6 @@
           <a href="#" class="logo">
             <img src="/sidebar/logo.png" class="logo-img" />
           </a>
-          <div class="box">
-            <form name="search">
-              <input
-                type="text"
-                class="input"
-                name="txt"
-                onmouseout="this.value = ''; this.blur();"
-              />
-            </form>
-            <i class="fas fa-search"></i>
-          </div>
         </div>
         <div class="wrapper">
           <div class="profile">
@@ -78,11 +67,14 @@
               <div class="profile-picture"></div>
               <div class="bio"></div>
             </div>
-            <div class="posts"></div>
+            <div class="posts">
+              <div class="created"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="/pages/friends/friend/functions.js"></script>
     <script src="/pages/friends/friend/friend.js"></script>
     <script src="/sidebar/sidebar.js"></script>
 

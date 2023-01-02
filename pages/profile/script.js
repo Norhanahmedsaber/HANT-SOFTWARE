@@ -1,25 +1,30 @@
-const user = JSON.parse(localStorage.getItem("loggedInUser"));
-let info = {
-  name: user.name,
-  bio: user.bio,
-  imgURL: user.img,
-};
-function render() {
-  const ppEl = document.querySelector(".profile-picture");
-  const infoEl = document.querySelector(".bio");
-  const imgEl = document.createElement("img");
-  imgEl.setAttribute("src", info.imgURL);
-  imgEl.setAttribute("id", "pp");
-  const nameEl = document.createElement("h2");
-  const bioEl = document.createElement("h3");
-  nameEl.textContent = info.name;
-  bioEl.textContent = info.bio;
-
-  ppEl.appendChild(imgEl);
-  infoEl.appendChild(nameEl);
-  infoEl.appendChild(bioEl);
-}
 render();
+const uploadedEl = document.querySelector(".list ul");
+let uploaded = [];
+
+document.querySelector("#post").addEventListener("click", () => {
+  createPost();
+  // document.getElementById("create-text").style.display = "none";
+});
+document.querySelector("#text-btn").addEventListener("click", () => {
+  if (document.querySelector(".input2").style.display === "none") {
+    document.querySelector(".input2").style.display = "block";
+  } else {
+    const textEl = document.querySelector(".input2");
+    if (textEl.value.length === 0) {
+      textEl.style.display = "none";
+    }
+  }
+});
 document.getElementById("edit-btn").addEventListener("click", () => {
   window.location.href = "/pages/profile/edit.html";
 });
+document.querySelector("#upload-btn").addEventListener("click", () => {
+  document.querySelector(".new-post").click();
+});
+document.querySelector(".new-post").addEventListener("input", (e) => {
+  uploaded.push(e.target.value.substring(12));
+  renderUploaded();
+});
+document.querySelector(".input2").addEventListener("input", () => {});
+

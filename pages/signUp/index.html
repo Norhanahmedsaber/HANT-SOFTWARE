@@ -5,37 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/pages/signUp/styles.css" rel="stylesheet"> </link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <title>signup</title>
 </head>
 <body>
-    <div class="SignUp-form">
-        <h1>HANT</h1>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Welcome to HANT</h3>
         <!-- Name: -->
-        <div class="name">
-            <label>First Name:</label>
-            <input id="firstname"type="text" placeholder="firstname">
-            <label>Last Name:</label>
-            <input  id="lastname"type="text" placeholder="lastname">
-        </div>
+            <div class="labels">
+                <label for="firstname" class="first-label">First Name</label>
+                <label for="lastname" class="last-label">Last Name</label>
+            </div>
+            <div class="names">    
+                <input id="firstname"type="text" placeholder="First Name">
+                <input id="lastname"type="text" placeholder="Last Name">
+            </div>
         <!-- email -->
-        <div class="email">
-            <label class="label">Email: </label>
-            <input id="email-Text" type="text" placeholder="email">
-         </div>
+            <label class="label" for="email-Text">Email</label>
+            <input id="email-Text" type="text" placeholder="Email">
          <!-- password -->
-         <div class="password">
-            <label>Password:</label>
-            <input id="password-Text" type="password" placeholder="password">
-        </div>
+            <label for="password-Text">Password</label>
+            <input id="password-Text" type="password" placeholder="Password">
         <!-- confirmedpassword -->
-        <div class="password">
-            <label>Confirm Password</label>
+            <label for="confirm">Confirm Password</label>
             <input id="confirm" type="password" , placeholder="confirm password">
-        </div>
         <!-- forget your password option -->
-        <div class="button">
-          <button id="signup">SignUp</button>
-        </div>
+          <button id="signup">Sign Up</button>
+        <!-- signIn -->
+            <label>Already have an account? <a href="/pages/signIn/">Sign In</a></label>
         <script src="/scripts/UUID.js"></script>
         <script src="/pages/signUp/signup.js"></script>
     
