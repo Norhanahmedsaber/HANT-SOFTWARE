@@ -7,7 +7,9 @@
   top: 10px;
   padding-top: 10px;
 }
-
+.filtered{
+  display: none !important;
+}
 .name {
   margin-left: 10px;
   margin-right: 80px;
