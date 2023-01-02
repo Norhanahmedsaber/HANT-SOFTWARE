@@ -4,6 +4,7 @@ let uploaded = [];
 
 document.querySelector("#post").addEventListener("click", () => {
   createPost();
+  // document.getElementById("create-text").style.display = "none";
 });
 document.querySelector("#text-btn").addEventListener("click", () => {
   if (document.querySelector(".input2").style.display === "none") {
@@ -25,3 +26,5 @@ document.querySelector(".new-post").addEventListener("input", (e) => {
   uploaded.push(e.target.value.substring(12));
   renderUploaded();
 });
+document.querySelector(".input2").addEventListener("input", () => {});
+
