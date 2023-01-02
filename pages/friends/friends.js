@@ -27,16 +27,16 @@ function render() {
         <hr>
         </div>`;
         table.innerHTML += html;
+      const title=document.createElement('h1');
+      
+        
       }
     });
   }
 }
 render();
 
-const names =document.querySelector(".name");
 const search =document.querySelector(" input");
-const addForm = document.querySelector('.add');
-const div = document.querySelector('.div-table');
 
 const filterFriends = term=>{
   filteredUsers = users.filter( user=> {
