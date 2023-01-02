@@ -112,7 +112,7 @@ textarea {
   width: 45px;
   height: 45px;
   position: relative;
-  left: 12%;
+  right: -57%;
   border: none;
   background-color: rgb(255, 255, 255);
   border-radius: 10%;
@@ -125,11 +125,49 @@ textarea {
   background-color: rgb(141, 131, 151);
   scale: (1.01);
 }
+.create-label {
+  position: relative;
+  left: 3%;
+}
 .create-title {
   position: relative;
+  display: flex;
+}
+.create-title button{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+  right: -30%;
+}
+.personalPhoto {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 4%;
+  width: 100px;
+  height: 100px;
+}
+.name {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 30px;
+  top: 0;
+  left: 6%;
+}
+.date {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 30px;
+  top: 20%;
+  left: 10%;
 }
 .create-title label {
-  margin-right: 350px;
+  display: inline;
+  height: 30px;
 }
 .new-post {
   display: none;
@@ -199,7 +237,7 @@ label {
   width: 45px;
   height: 45px;
   position: relative;
-  left: 12%;
+  right: -71.5%;
   border: none;
   background-color: rgb(255, 255, 255);
   border-radius: 10%;
@@ -215,13 +253,12 @@ label {
   width: 45px;
   height: 45px;
   position: relative;
-  left: 12%;
   border: none;
   background-color: rgb(255, 255, 255);
   border-radius: 10%;
   transition: all 0.3s ease;
   padding: 10px;
-  margin-right: 100px;
+  margin-left: 20px;
 }
 #doneEdit-btn:hover {
   cursor: pointer;
@@ -242,17 +279,17 @@ label {
 .created textarea {
   display: block;
 }
+
 #delete-btn {
   width: 45px;
   height: 45px;
   position: relative;
-  left: 12%;
   border: none;
   background-color: rgb(255, 255, 255);
   border-radius: 10%;
   transition: all 0.3s ease;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 100px;
 }
 #delete-btn:hover {
@@ -264,7 +301,6 @@ label {
   width: 45px;
   height: 45px;
   position: relative;
-  left: 12%;
   border: none;
   background-color: rgb(255, 255, 255);
   border-radius: 10%;
