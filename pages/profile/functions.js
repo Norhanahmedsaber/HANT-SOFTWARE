@@ -195,6 +195,16 @@ function renderPost(post) {
   const headerEl = document.createElement("header");
   headerEl.classList.add("create-title");
 
+  const img=document.createElement("img");
+  if(! user.img){
+    user.img = "/pages/friends/images/585e4bf3cb11b227491c339a.png";
+  }
+  img.setAttribute("src", user.img);
+  img.setAttribute("alt","personal image");
+
+  img.classList.add("img-icon");
+  headerEl.appendChild(img);
+
   const labelEl = document.createElement("label");
   labelEl.textContent = post.authorName;
 
