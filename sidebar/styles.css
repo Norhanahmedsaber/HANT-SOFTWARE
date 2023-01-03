@@ -20,9 +20,10 @@
 }
 .logo {
   display: block;
+
 }
 .logo-img {
-  width: 150px;
+  width: 100px;
 }
 .nav-list {
   list-style: none;
