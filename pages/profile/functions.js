@@ -208,11 +208,7 @@ function renderPost(post) {
 
   const labelEl = document.createElement("label");
   labelEl.classList.add("name");
-  labelEl.textContent = post.authorName;
-
-  const labelDateEl = document.createElement("label");
-  labelDateEl.classList.add("date");
-  labelDateEl.textContent = date(post.creationData);
+  labelEl.innerHTML = labelEl.innerHTML = "<span class='nameLabel'>" + post.authorName + "</span>" + "<br>" + "<span class='date'>" + date(post.creationData) + "</span>";;
 
   const updateEl = document.createElement("button");
   updateEl.id = "update-btn";
@@ -286,7 +282,6 @@ function renderPost(post) {
   deleteEl.appendChild(deleteIcon);
 
   headerEl.appendChild(labelEl);
-  headerEl.appendChild(labelDateEl);
   headerEl.appendChild(upEl);
   headerEl.appendChild(doneEl);
   headerEl.appendChild(updateEl);
