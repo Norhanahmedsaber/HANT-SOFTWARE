@@ -69,7 +69,6 @@ function renderPosts() {
       });
     }
   });
-  console.log();
   posts = posts.sort(
     (a, b) => new Date(b.creationData) - new Date(a.creationData)
   );
@@ -90,11 +89,8 @@ function renderPost(post) {
   headerEl.classList.add("create-title");
 
   const labelEl = document.createElement("label");
-  labelEl.textContent = post.authorName;
+  labelEl.innerHTML = "<span class='nameLabel'>" + post.authorName + "</span>" + "<br>" + "<span class='date'>" + date(post.creationData) + "</span>";
   labelEl.classList.add("name")
-  const labelDateEl = document.createElement("label");
-  labelDateEl.textContent = date(post.creationData);
-  labelEl.classList.add("date")
   const img=document.createElement("img");
   let image;
   users.forEach((u)=> {
@@ -124,7 +120,6 @@ function renderPost(post) {
   })
   
   headerEl.appendChild(labelEl);
-  headerEl.appendChild(labelDateEl);
 
   const formEl = document.createElement("form");
   formEl.setAttribute("action", "#");
