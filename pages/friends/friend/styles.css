@@ -8,13 +8,19 @@
   width: 30%;
 }
 #pp {
-  width: 100%;
-  clip-path: circle(95px);
-  border: 10px solid black;
-  border-radius: 50%;
+  width: 250px;
+  margin-top: 10px;
+  border-radius: 5%;
+  border: 1px solid black;
 }
 .info {
+  display: flex;
   background-color: #b8c3d1;
+  margin-left: 7px;
+  margin-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
   box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .bio {
@@ -25,10 +31,13 @@
   font-size: 40px;
 }
 h2 {
-  font-family: Comic Sans MS;
+  margin-top: 20px;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
 }
 h3 {
-  font-family: Comic Sans MS;
+  font-family:  'Poppins', sans-serif;
+  font-size: 25px;
 }
 .page {
   display: flex;
@@ -37,7 +46,7 @@ h3 {
   width: 50px;
   height: 50px;
   position: relative;
-  left: 12%;
+  margin-top: 50px;
   border: none;
   background-color: #b8c3d1;
   border-radius: 50%;
@@ -138,7 +147,7 @@ textarea {
   margin: 0;
   position: relative;
   top: 0;
-  right: -30%;
+  right: -43%;
 }
 .personalPhoto {
   padding: 0;
@@ -148,22 +157,23 @@ textarea {
   left: 4%;
   width: 100px;
   height: 100px;
+  border-radius: 10%;
+  border: 1px solid rgb(90, 90, 90);
 }
 .name {
+  font-size: 25px;
   padding: 0;
   margin: 0;
   position: relative;
   height: 30px;
   top: 0;
   left: 6%;
+  text-align: left;
 }
 .date {
   padding: 0;
   margin: 0;
-  position: relative;
-  height: 30px;
-  top: 20%;
-  left: 10%;
+  font-size: 15px;
 }
 .create-title label {
   display: inline;
@@ -588,5 +598,3 @@ form textarea:valid ~ button:hover{
   margin-right: 0;
   margin-left: auto;
 }
-
-

@@ -45,11 +45,8 @@ function renderPost(post) {
   headerEl.classList.add("create-title");
 
   const labelEl = document.createElement("label");
-  labelEl.textContent = post.authorName;
+  labelEl.innerHTML = labelEl.innerHTML = "<span class='nameLabel'>" + post.authorName + "</span>" + "<br>" + "<span class='date'>" + date(post.creationData) + "</span>";
   labelEl.classList.add("name")
-  const labelDateEl = document.createElement("label");
-  labelDateEl.textContent = date(post.creationData);
-  labelEl.classList.add("date")
   const img=document.createElement("img");
   users.forEach((u)=> {
     if(id === u.id) {
@@ -78,7 +75,6 @@ function renderPost(post) {
   })
   
   headerEl.appendChild(labelEl);
-  headerEl.appendChild(labelDateEl);
 
   const formEl = document.createElement("form");
   formEl.setAttribute("action", "#");
