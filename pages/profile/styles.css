@@ -104,6 +104,7 @@ img {
 }
 #post {
   border: 1.5px solid rgb(53, 53, 53);
+  background-color: black;
 }
 textarea {
   resize: none;
