@@ -64,17 +64,24 @@
         <div class="wrapper">
             <input id="upload" name="upload" type="file" >
           <div class="profile-picture"><img id="pp" src="/pages/profile/Images/user.png" alt=""><button id="edit-photo"><img id="upload-photo" src="/pages/profile/Images/photo.png" alt="" /></button></div>
-            <div>
-                <label>First name:</label>
-                <input type="text" placeholder="firstname" id="firstname">
-                <label>last name:</label>
-                <input type="text" placeholder="lastname" id="lastname">
-                <label>Bio:</label>
-                <input type="text" placeholder="Bio" id="bio">
-                <button id="cancel">Cancel</button>
-                <button id="save">Save</button>
-            </div>
+            
+          <div id="divEdit">
+          <div class="inputdiv">
+            <label class="label">First name:</label>
+            <input type="text" placeholder="firstname" id="firstname">
+          </div>
+          <div class="inputdiv">
+            <label class="label">last name:</label>
+            <input type="text" placeholder="lastname" id="lastname">
+          </div>
+          <div class="inputdiv">
+            <label class="label">Bio:</label>
+            <input type="text" placeholder="Bio" id="bio">
+          </div>  
+          <button id="cancel">Cancel</button>
+          <button id="save">Save</button>
         </div>
+      </div>
       </div>
     </div>
     <script src="/pages/profile/edit.js"></script>

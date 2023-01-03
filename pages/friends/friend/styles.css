@@ -598,3 +598,36 @@ form textarea:valid ~ button:hover{
   margin-right: 0;
   margin-left: auto;
 }
+.logged-user{
+  display: inline-block;
+  width: 30%;
+  color: #dbe9fa;
+  position: absolute;
+  bottom: 10px;
+  
+  
+  
+}
+.logged-user img{
+  width: 80%;
+  clip-path: circle(100px);
+  border: 1px solid black;
+  border-radius: 80%;
+}
+#utxtname{
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .img-icon{
+    margin-top: auto;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    top: 35px;
+  }
+
+}
