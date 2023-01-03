@@ -103,8 +103,6 @@ function renderPost(post) {
   })
   
   img.setAttribute("class","personalPhoto");
-
-  img.classList.add("img-icon");
   headerEl.appendChild(img);
 
   const updateEl = document.createElement("button");
